@@ -19,9 +19,9 @@
     }
 
     sideBar.addEventListener("click", toggleChildDivs);
-}); */
+}); 
  
-/*document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const sideBar = document.getElementById("hide");
 
     function toggleChildDivs() {
@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const weekDisplay = document.querySelector('.week h4');
     const itemDivs = document.querySelectorAll('.itemParent div');
 
+
     function toggleChildDivs() {
         const childDivs = sideBar.getElementsByTagName("div");
         let shouldShow = window.getComputedStyle(childDivs[0]).display === "none"; 
@@ -56,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sideBar.style.transition = "left 0.5s ease, opacity 0.3s ease";
         sideBar.style.boxShadow = "0px 0px 2px 0px #32B9B1"
     }
-
+ 
     sideBar.addEventListener("click", toggleChildDivs);
 
     itemDivs.forEach(item => {
@@ -67,5 +68,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    //new function
+    function toChangeColor(event){
+        const siblings = Array.from(this.parentElement.children);
+        if(this.style.backgroundColor === 'rgb(8, 23, 63)'){
+            this.style.backgroundColor = '#438EAE';
+        }else{
+           this.style.backgroundColor = '#08173f';
+        }
+    }
+
+    const mwfAttendance = document.querySelectorAll('.containerAtt > div');
+    const tthAttendance = document.querySelectorAll('.container2 > div');
+
+    mwfAttendance.forEach(div =>{
+        div.addEventListener("click", toChangeColor);
+    });
+    tthAttendance.forEach(div =>{
+        div.addEventListener("click", toChangeColor);
+    });
 });
+
+
+
 
