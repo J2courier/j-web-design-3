@@ -111,8 +111,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const siblings = Array.from(this.parentElement.children);
         if (this.style.backgroundColor === 'rgb(8, 23, 63)') {
             this.style.backgroundColor = '';
+            this.style.border = '';
         } else {
             this.style.backgroundColor = '#08173f';
+            this.style.border = "2px solid #02ffaf";
         }
     }
 
@@ -123,11 +125,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         mwfAttendance.forEach(div => {
             div.style.backgroundColor = ''; // Reset background color
+            div.style.border = '';
             div.style.display = 'block';   // Ensure div is visible
         });
         tthAttendance.forEach(div => {
             div.style.backgroundColor = ''; // Reset background color
             div.style.display = 'block';   // Ensure div is visible
+            div.style.border = '';
         });
 
         // Update week display and toggle sidebar
