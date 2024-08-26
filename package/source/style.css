@@ -36,7 +36,7 @@ body::-webkit-scrollbar {
     width: 15px;
     background-color: #32B9B1;
     border-radius: 0px 5px 5px 0px;
-    position: relative;
+    position: absolute;
     left: 2px;
     top: 10px;
 }
@@ -51,6 +51,7 @@ body::-webkit-scrollbar {
     left: -200px;
     top: -270px;
     overflow-y: auto;
+
 }
 .itemParent::-webkit-scrollbar{
     display: none;
@@ -148,7 +149,7 @@ a{
 .blur{
     height: 660px;
     width: 1500px;
-    background-color: #182d6139;
+    background-color: #abc3ff3f;
     position: absolute;
     left: -200px;
     top: -270px;
@@ -248,6 +249,9 @@ a{
     position: relative;
     left: 1080px;
     top: 340px;
+}
+.container2 > div:hover {
+    background-color: #08173F;
 }
 
 .container3{

@@ -119,22 +119,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function resetAndUpdate() {
-        // Reset color and visibility
         const mwfAttendance = document.querySelectorAll('.containerAtt > div');
         const tthAttendance = document.querySelectorAll('.container2 > div');
 
         mwfAttendance.forEach(div => {
-            div.style.backgroundColor = ''; // Reset background color
+            div.style.backgroundColor = ''; 
             div.style.border = '';
-            div.style.display = 'block';   // Ensure div is visible
+            div.style.display = 'block';  
         });
         tthAttendance.forEach(div => {
-            div.style.backgroundColor = ''; // Reset background color
-            div.style.display = 'block';   // Ensure div is visible
+            div.style.backgroundColor = ''; 
+            div.style.display = 'block';  
             div.style.border = '';
         });
 
-        // Update week display and toggle sidebar
         const weekText = this.querySelector('h4') ? this.querySelector('h4').innerText : '';
         if (weekText.startsWith('WEEK')) {
             weekDisplay.innerText = weekText;
@@ -147,7 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
         item.addEventListener('click', resetAndUpdate);
     });
 
-    // Apply color change function to attendance divs
     const mwfAttendance = document.querySelectorAll('.containerAtt > div');
     const tthAttendance = document.querySelectorAll('.container2 > div');
 
